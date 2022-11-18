@@ -1,0 +1,39 @@
+h1 {
+  font-size: 800%;
+  margin: 5%
+}
+#target {
+  font-size: 300%;
+}
+.outer {
+  display: table;
+  width: 100%;
+  height: 100vh
+}
+.inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+.well {
+  margin-top: 5%;
+  height: 90vh;
+  font-size: 200%;
+  overflow-y: scroll;
+}
+h2 {
+  font-size: 400%;
+}
+.list-group-item {
+  font-size :200%;
+}
+#luckyNumber {
+  font-size: 1500%;
+}
+input {
+  width: 10%;
+}
+body {
+  font-family: 'Play', sans-serif;
+  background: lightgreen;
+  background-size: cover;
+}

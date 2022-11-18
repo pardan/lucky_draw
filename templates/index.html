@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Lucky Draw</title>
+  <script src="https://use.fontawesome.com/18f2c49040.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8">
+      <div class="outer">
+        <div class="inner">
+          <div class="row">
+            <div class="text-center col-xs-10 col-xs-offset-1 animated bounce">
+              <h1>Lucky Draw!</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-4">
+              <button class="btn btn-block btn-primary text-center" id="target" data-toggle="modal" data-target="#drawModal">Draw!</button></div></div>
+          <br>
+            <div class="row">
+            <div class="col-xs-2 col-xs-offset-4">
+              <button type="button" data-toggle="modal" data-target="#settingsModal" class="btn btn-block btn-default"><i class="fa fa-cog fa-lg" aria-hidden="true"></i></button></div>
+              <div class="col-xs-2">
+                <a class="btn btn-block btn-info" href="#" download="luckydraw_num.csv" id="download"><i class="fa fa-download fa-lg" aria-hidden="true"></i></a>
+                
+                
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="well clearfix">
+        <div class="list-group text-center" id="numList">
+          <!-- Number list appears here -->          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Modal -->
+<div id="resetModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content modal-sm">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></i> Warning!</h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to reset stored data?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="resetArray" type="button" class="btn btn-danger" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal -->
+<div id="settingsModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><i class="fa fa-cog fa-lg" aria-hidden="true"></i> Settings</h4>
+      </div>
+      <div class="modal-body">
+        <p>Lucky draw number range:</p>
+        <p><input type="number" name="min" id="min"> until <input type="number" name="max" id="max"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger pull-left" data-dismiss="modal" data-toggle="modal" data-target="#resetModal"><i class="fa fa-trash" aria-hidden="true"></i> Reset drawn numbers</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="newRange"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="drawModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body text-center">
+        <h2 class="animated tada">The lucky number is</h2>
+        <h1 id="luckyNumber" class="animated wobble">#</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js'></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
